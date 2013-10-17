@@ -1,18 +1,11 @@
-# Object files
-*.o
-*.ko
+#! /bin/sh
 
-# Libraries
-*.lib
-*.a
+# Dirt files
+*~
+.#*
+*.stackdump
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
+# Compiled files
+*.elc
+*.pyc
+__cache__
