@@ -1,11 +1,3 @@
 #! /bin/sh
 
-# Dirt files
-*~
-.#*
-*.stackdump
-
-# Compiled files
-*.elc
-*.pyc
-__cache__
+auto-save-list
