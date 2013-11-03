@@ -5,7 +5,7 @@
 ;; Login   <barato_j@epitech.net>
 ;;
 ;; Started on  Wed Jun  6 13:52:50 2012 jules baratoux
-;; Last update Tue Jun 11 14:40:49 2013 jules baratoux
+;; Last update Sun Nov  3 19:19:11 2013 jules baratoux
 ;;
 
 ;; This file should be loaded by .emacs from shared emacs setup
@@ -29,11 +29,7 @@
 
 (windmove-default-keybindings 'meta)			; Move between windows	Alt ← ↑ →
 
-
-
 (global-set-key "" 'backward-delete-char)
-(global-set-key "" 'compile)
-;(global-set-key "" 'goto-line)
 
 (global-set-key    "[H"	'beginning-of-line)	; go to	begin		Start
 (global-set-key    "[F"	'end-of-line)		; go to end		End
@@ -50,6 +46,7 @@
 (global-set-key [f3] 'vectra-man-on-word)		; Man over word
 (global-set-key [f9] 'compile)				; Compile		F9		C-c C-c
 (global-set-key "\C-c\C-c" 'compile)			;
+(global-set-key ""     'compile)			;
 
 (global-set-key [backtab] 'yas/expand)			; Yas/expand		Shift-tab
 

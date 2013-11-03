@@ -5,16 +5,16 @@
 ;; Login   <barato_j@epitech.net>
 ;;
 ;; Started on  Wed Jun  6 13:52:50 2012 jules baratoux
-;; Last update Thu Jul 18 15:56:26 2013 jules baratoux
+;; Last update Sun Nov  3 19:19:08 2013 jules baratoux
 ;;
 
 ;; Should be loaded by .emacs from shared emacs setup
 
 (load "~/.emacs.d/fix_bug.el")
 (load "~/.emacs.d/std_comment.el")
-(load-file "~/.emacs.d/plugins/highlight-current-line.el")
+;; (load-file "~/.emacs.d/plugins/highlight-current-line.el") ; redundant
 (load-file "~/.emacs.d/keywords.el")
-(add-to-list 'load-path "~/.emacs.d/plugins/")
+(add-to-list 'load-path "~/.emacs.d/plugins/") ; Load all plugins
 
 ;; Dictionary
 (require 'auto-complete-config)
@@ -24,9 +24,6 @@
 (require 'yasnippet-bundle)
 (require 'highlight-current-line)
 
-;; ;; Flymake
-;; (require 'flymake)
-;; (add-hook 'find-file-hook 'flymake-find-file-hook)
 
 ;; Delete trailing whitespace
 (add-hook 'c++-mode-hook '(lambda ()
@@ -58,9 +55,17 @@
   (unless (or (minibufferp) (member major-mode linum-disabled-modes-list))
     (linum-mode 1)))
 
-;; Active cperl mode
+
+;; cperl-mode
 (defalias 'perl-mode 'cperl-mode)
 (setq cperl-hairy t)
+
+;; markdown-mode
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 ;; Better indent for CSS
 (setq cssm-indent-level 2)
