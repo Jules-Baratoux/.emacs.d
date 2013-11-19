@@ -5,7 +5,7 @@
 ;; Login   <barato_j@epitech.net>
 ;;
 ;; Started on  Wed Jun  6 13:27:55 2012 jules baratoux
-;; Last update Sun Nov  3 19:19:11 2013 jules baratoux
+;; Last update Mon Nov 11 12:24:22 2013 jules baratoux
 ;;
 
 ;; ┌─────────────────────────────────────────────────────────────────────────┐
@@ -63,11 +63,20 @@
 
 
 (custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
  '(hs-minor-mode t)
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
+ '(safe-local-variable-values (quote ((eval compilation-shell-minor-mode))))
  '(show-paren-mode t))
 (custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
  '(flymake-errline ((((class color)) (:foreground "red"))))
  '(flymake-warnline ((((class color)) (:underline "yellow"))))
  '(linum ((t (:inherit (shadow default) :background "black" :foreground "white")))))
@@ -115,3 +124,5 @@ of FILE in the current directory, suitable for creation"
   (define-key input-decode-map "\e[1;2A" [S-up]))
 (if (equal "xterm" (tty-type))
     (define-key input-decode-map "\e[1;2A" [S-up]))
+
+(add-hook 'term-mode-hook 'ansi-color-for-comint-mode-on)
