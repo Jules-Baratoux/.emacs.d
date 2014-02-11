@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: main
+# contributor: Jules Baratoux <jules@baratoux.fr>
+# --
+#include <cstdlib>
+#include <iostream>
+
+<div align="${1:$$(yas-choose-value '("right" "center" "left"))}">
+
+int		main(${2:int argc, const char *argv[]})
+{
+    $0
+    return ${3:EXIT_SUCCESS EXIT_FAILURE};
+}
